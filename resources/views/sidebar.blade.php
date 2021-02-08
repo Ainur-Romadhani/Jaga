@@ -38,22 +38,22 @@
       </a>
 
       <br>
-      @if(auth()->user()->role == 'admin')
+      <!-- @if(auth()->user()->role == 'admin') -->
       <a class="sidebar-brand d-flex align-items-center justify-content-center" href="/">
         <div class="sidebar-brand-icon rotate-n-15">
           <!-- <i class="fas fa-like"></i> -->
         </div>
         <div class="sidebar-brand-text mx-3">Administrator</div>
       </a>
-      @endif
-      @if(auth()->user()->role == 'sekretaris')
+      <!-- @endif -->
+      <!-- @if(auth()->user()->role == 'sekretaris')
       <a class="sidebar-brand d-flex align-items-center justify-content-center" href="/">
-        <div class="sidebar-brand-icon rotate-n-15">
+        <div class="sidebar-brand-icon rotate-n-15"> -->
           <!-- <i class="fas fa-like"></i> -->
-        </div>
+        <!-- </div>
         <div class="sidebar-brand-text mx-3">Sekretaris</div>
       </a>
-      @endif
+      @endif -->
 
       <!-- Divider -->
       <hr class="sidebar-divider my-0">
