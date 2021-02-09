@@ -103,7 +103,6 @@
       <!-- Divider -->
       <hr class="sidebar-divider">
 
-      @if(auth()->user()->role = 'admin')
       <!-- Heading -->
       <div class="sidebar-heading">
         Master
@@ -139,7 +138,6 @@
       </li>
       <!-- Divider -->
       <hr class="sidebar-divider d-none d-md-block">
-@endif
       <!-- Sidebar Toggler (Sidebar) -->
       <div class="text-center d-none d-md-inline">
         <button class="rounded-circle border-0" id="sidebarToggle"></button>
