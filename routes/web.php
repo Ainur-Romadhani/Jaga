@@ -18,17 +18,16 @@ Route::get('/085230784187', function () {
     echo "rahasia";
 });
 
-Route::group(['middleware' => ['auth','Role:admin,sekretaris']],function(){
+Route::group(['middleware' => ['auth','Role:admin']],function(){
 
 Route::get('/createuser',[UserController::class,'create']);
 Route::get('/user',[UserController::class,'index']);
 Route::post('/store',[UserController::class,'store']);
 Route::get('/datauser/{id}',[UserController::class,'edit']);
 Route::put('/update/{id}',[UserController::class,'update']);
-Route::get('/',[DashboardController::class,'index']);
 
 });
 Route::get('/login',[AuthController::class,'login']);
 Route::post('postlogin',[AuthController::class,'postlogin']);
 Route::get('/logout',[AuthController::class,'logout']);
-
+Route::get('/',[DashboardController::class,'index']);
