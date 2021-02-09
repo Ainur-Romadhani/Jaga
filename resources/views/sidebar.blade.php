@@ -38,20 +38,16 @@
       </a>
 
       <br>
-     // @if(auth()->user()->role == 'admin')
       <a class="sidebar-brand d-flex align-items-center justify-content-center" href="/">
         <div class="sidebar-brand-icon rotate-n-15">
         </div>
         <div class="sidebar-brand-text mx-3">Administrator</div>
       </a>
-     // @endif
-     // @if(auth()->user()->role == 'sekretaris')
       <!-- <a class="sidebar-brand d-flex align-items-center justify-content-center" href="/">
         <div class="sidebar-brand-icon rotate-n-15">
         </div>
         <div class="sidebar-brand-text mx-3">Sekretaris</div>
       </a> -->
-    //  @endif
 
       <!-- Divider -->
       <hr class="sidebar-divider my-0">
