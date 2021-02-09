@@ -38,16 +38,22 @@
       </a>
 
       <br>
+      @if(auth()->user()->role == 'admin')
       <a class="sidebar-brand d-flex align-items-center justify-content-center" href="/">
         <div class="sidebar-brand-icon rotate-n-15">
+          <!-- <i class="fas fa-like"></i> -->
         </div>
         <div class="sidebar-brand-text mx-3">Administrator</div>
       </a>
-      <!-- <a class="sidebar-brand d-flex align-items-center justify-content-center" href="/">
+      @endif
+      @if(auth()->user()->role == 'sekretaris')
+      <a class="sidebar-brand d-flex align-items-center justify-content-center" href="/">
         <div class="sidebar-brand-icon rotate-n-15">
+          <!-- <i class="fas fa-like"></i> -->
         </div>
         <div class="sidebar-brand-text mx-3">Sekretaris</div>
-      </a> -->
+      </a>
+      @endif
 
       <!-- Divider -->
       <hr class="sidebar-divider my-0">
@@ -103,6 +109,7 @@
       <!-- Divider -->
       <hr class="sidebar-divider">
 
+      @if(auth()->user()->role = 'admin')
       <!-- Heading -->
       <div class="sidebar-heading">
         Master
@@ -138,6 +145,7 @@
       </li>
       <!-- Divider -->
       <hr class="sidebar-divider d-none d-md-block">
+@endif
       <!-- Sidebar Toggler (Sidebar) -->
       <div class="text-center d-none d-md-inline">
         <button class="rounded-circle border-0" id="sidebarToggle"></button>
