@@ -46,11 +46,28 @@
                       <td align ="center"><a href="/datauser/{{$data->id}}" class="btn btn-info btn-circle">
                       <i class="fas fa-user-edit"></i>
                             </a>  
-                          <button class="btn btn-danger btn-circle">
+                            <button class="btn btn-danger btn-circle" data-toggle="modal" data-target="#ModalDelete{{$data->id}}">
                                 <i class="fas fa-trash"></i>
                             </button>
                         </td>
                     </tr>
+                    <div id="ModalDelete{{$data->id}}" class="modal modal-danger fade" tabindex="-1" role="dialog" aria-labelledby="custom-width-modalLabel" aria-hidden="true" style="display: none;">
+                            <div class="modal-dialog" style="width:55%;">
+                                <div class="modal-content">
+                                    <div class="modal-body">
+                                        <h4>Apakah yakin menghapus {{$data->name}} ?</h4>
+                                        <input type="hidden", name="applicant_id" id="app_id" value="">
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-primary waves-effect" data-dismiss="modal">Close</button>
+                                        <!-- <button type="submit" class="btn btn-danger waves-effect remove-data-from-delete-form">Delete</button> -->
+                                        <a href="/deleteuser/{{$data->id}}" class="btn btn-danger waves-effect remove-data-from-delete-form">
+                                            <i class="fas fa-user-trash">Delete</i>
+                                        </a>  
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     <!-- Modal -->
                     @endforeach
                   </tbody>

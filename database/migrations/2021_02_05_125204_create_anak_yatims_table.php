@@ -19,7 +19,7 @@ class CreateAnakYatimsTable extends Migration
             $table->string('nama_ibu')->nullable();
             $table->string('nama_bapak')->nullable();
             $table->string('alamat')->nullable();
-            $table->string('no_hp_orang_tua')->nullable();
+            $table->char('no_hp_orang_tua',12)->nullable();
             $table->string('create_by')->nullable();
             $table->string('update_by')->nullable();
             $table->string('delete_by')->nullable();

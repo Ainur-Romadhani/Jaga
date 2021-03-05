@@ -99,8 +99,10 @@ class UserController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function softdelete($id)
     {
-        //
+        $data_user = User::findOrFail($id);
+        $data_user->delete();
+        return redirect('/user')->with('success', 'Data Berhasil Di Hapus !');
     }
 }

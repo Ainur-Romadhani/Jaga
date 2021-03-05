@@ -1,82 +1,88 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="">
-  <meta name="author" content="">
-
-  <title>Login Page</title>
-
-  <!-- Custom fonts for this template-->
-  <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
-  <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
-
-  <!-- Custom styles for this template-->
-  <link href="css/sb-admin-2.min.css" rel="stylesheet">
-
+	<title>Login V12</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--===============================================================================================-->	
+	<link rel="icon" type="image/png" href="images/icons/favicon.ico"/>
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{{ asset('template_login/vendor/bootstrap/css/bootstrap.min.css')}}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{{ asset('template_login/fonts/font-awesome-4.7.0/css/font-awesome.min.css') }}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{{ asset('template_login/fonts/Linearicons-Free-v1.0.0/icon-font.min.css') }}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{{ asset('template_login/vendor/animate/animate.css') }}">
+<!--===============================================================================================-->	
+	<link rel="stylesheet" type="text/css" href="{{ asset('template_login/vendor/css-hamburgers/hamburgers.min.css') }}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{{ asset('template_login/vendor/select2/select2.min.css') }}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{{ asset('template_login/css/util.css') }}">
+	<link rel="stylesheet" type="text/css" href="{{ asset('template_login/css/main.css') }}">
+<!--===============================================================================================-->
 </head>
+<body>
+	
+	<div class="limiter">
+		<div class="container-login100" style="background-image: url('template_login/images/img-01.jpg');">
+			<div class="wrap-login100 p-t-190 p-b-30">
+				<form class="login100-form validate-form" action = "/postlogin" method ="POST">
+					@csrf>
+					<div class="login100-form-avatar">
+						<img src="{{asset ('template_user/assets/img/jagakali.png') }}" alt="AVATAR">
+					</div>
 
-<body class="bg-gradient-primary">
+					<span class="login100-form-title p-t-20 p-b-45">
+						Selamat Datang
+					</span>
+					<div class="wrap-input100 validate-input m-b-10" data-validate = "Username is required">
+						<input class="input100" type="text" name="email" placeholder="Username">
+						<span class="focus-input100"></span>
+						<span class="symbol-input100">
+							<i class="fa fa-user"></i>
+						</span>
+					</div>
 
-  <div class="container">
+					<div class="wrap-input100 validate-input m-b-10" data-validate = "Password is required">
+						<input class="input100" type="password" name="password" placeholder="Password">
+						<span class="focus-input100"></span>
+						<span class="symbol-input100">
+							<i class="fa fa-lock"></i>
+						</span>
+					</div>
 
-    <!-- Outer Row -->
-    <div class="row justify-content-center">
+					<div class="container-login100-form-btn p-t-10">
+						<button type="submit" class="login100-form-btn">
+							Login
+						</button>
+					</div>
 
-      <div class="col-xl-10 col-lg-12 col-md-9">
 
-        <div class="card o-hidden border-0 shadow-lg my-5">
-          <div class="card-body p-0">
-            <!-- Nested Row within Card Body -->
-            <div class="row">
-              <div class="col-lg-6">
-                <div class="p-5">
-                  <div class="text-center">
-                    <h1 class="h4 text-gray-900 mb-4">Selamat Datang</h1>
-                  </div>
-                  <form class="user" action = "/postlogin" method ="POST">
-                  @csrf
-                    <div class="form-group">
-                      <input type="email" name="email" class="form-control form-control-user" id="exampleInputEmail" aria-describedby="emailHelp" placeholder="Enter Email Address...">
-                    </div>
-                    <div class="form-group">
-                      <input type="password" name ="password" class="form-control form-control-user" id="exampleInputPassword" placeholder="Password">
-                    </div>
-                    <div class="form-group">
-                      <div class="custom-control custom-checkbox small">
-                        <input type="checkbox" class="custom-control-input" id="customCheck">
-                        <!-- <label class="custom-control-label" for="customCheck">Remember Me</label> -->
-                      </div>
-                    </div>
-                    <input type="submit" class="btn btn-primary btn-user btn-block" value="Login">
-                    <hr>
-                  </form>
-                  <hr>
-                </div>
-              </div>
-            </div>
-        </div>
+        <div class="text-center w-full">
+						<a class="txt1" href="/">
+							Home
+							<i class="fa fa-long-arrow-right"></i>						
+						</a>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+	
+	
 
-      </div>
-
-    </div>
-
-  </div>
-  @include('sweetalert::alert')
-  <!-- Bootstrap core JavaScript-->
-  <script src="vendor/jquery/jquery.min.js"></script>
-  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-
-  <!-- Core plugin JavaScript-->
-  <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
-
-  <!-- Custom scripts for all pages-->
-  <script src="js/sb-admin-2.min.js"></script>
+	@include('sweetalert::alert')
+<!--===============================================================================================-->	
+	<script src="{{ asset('template_login/vendor/jquery/jquery-3.2.1.min.js') }}"></script>
+<!--===============================================================================================-->
+	<script src="{{ asset('template_login/vendor/bootstrap/js/popper.js') }}"></script>
+	<script src="{{ asset('template_login/vendor/bootstrap/js/bootstrap.min.js') }}"></script>
+<!--===============================================================================================-->
+	<script src="{{ asset('template_login/vendor/select2/select2.min.js') }}"></script>
+<!--===============================================================================================-->
+	<script src="{{ asset('template_login/js/main.js')}}"></script>
 
 </body>
-
 </html>

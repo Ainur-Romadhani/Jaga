@@ -19,6 +19,11 @@
   <link href="{{asset ('css/sb-admin-2.min.css')}}" rel="stylesheet">
   <link href="{{asset ('vendor/datatables/dataTables.bootstrap4.min.css')}}" rel="stylesheet">
 
+  <link rel="stylesheet" href="{{asset ('css/select2/select2.min.css')}}">
+    <!-- chosen CSS
+		============================================ -->
+    <link rel="stylesheet" href="{{asset ('css/chosen/bootstrap-chosen.css')}}">
+
 </head>
 
 <body id="page-top">
@@ -30,7 +35,7 @@
     <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
 <br>
       <!-- Sidebar - Brand -->
-      <a class="sidebar-brand d-flex align-items-center justify-content-center" href="/">
+      <a class="sidebar-brand d-flex align-items-center justify-content-center" href="/dashboard">
         <div class="sidebar-brand-icon rotate-n-15">
           <!-- <i class="fas fa-like"></i> -->
         </div>
@@ -39,7 +44,7 @@
 
       <br>
       @if(auth()->user()->role == 'admin')
-      <a class="sidebar-brand d-flex align-items-center justify-content-center" href="/">
+      <a class="sidebar-brand d-flex align-items-center justify-content-center" href="/dashboard">
         <div class="sidebar-brand-icon rotate-n-15">
           <!-- <i class="fas fa-like"></i> -->
         </div>
@@ -47,7 +52,7 @@
       </a>
       @endif
       @if(auth()->user()->role == 'sekretaris')
-      <a class="sidebar-brand d-flex align-items-center justify-content-center" href="/">
+      <a class="sidebar-brand d-flex align-items-center justify-content-center" href="/dashboard">
         <div class="sidebar-brand-icon rotate-n-15">
           <!-- <i class="fas fa-like"></i> -->
         </div>
@@ -85,9 +90,9 @@
         <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
             <h6 class="collapse-header">Data Santunan:</h6>
-            <a class="collapse-item" href="buttons.html">Setoran Masuk </a>
-            <a class="collapse-item" href="buttons.html">Setoran Keluar </a>
-            <a class="collapse-item" href="buttons.html">Data Anak Yatim </a>
+            <a class="collapse-item" href="/setoranIn">Setoran Masuk </a>
+            <a class="collapse-item" href="/setoranOut">Setoran Keluar </a>
+            <a class="collapse-item" href="/anakyatim">Data Anak Yatim </a>
           </div>
         </div>
       </li>
@@ -101,7 +106,7 @@
         <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
             <h6 class="collapse-header">Anggota:</h6>
-            <a class="collapse-item" href="utilities-color.html">Data Anggota </a>
+            <a class="collapse-item" href="/anggota">Data Anggota </a>
           </div>
         </div>
       </li>
@@ -352,7 +357,8 @@
       <footer class="sticky-footer bg-white">
         <div class="container my-auto">
           <div class="copyright text-center my-auto">
-            <span>Copyright &copy; Your Website 2019</span>
+            <span>Copyright &copy; Jaga Kali 2021</span>
+            <span>by Ainur</span>
           </div>
         </div>
       </footer>
@@ -401,9 +407,15 @@
   <!-- Page level plugins -->
   <script src="{{asset('vendor/chart.js/Chart.min.js')}}"></script>
 
+  <script src="{{asset ('js/select2/select2.full.min.js')}}"></script>
+  <script src="{{asset ('js/select2/select2-active.js')}}"></script>
+
   <!-- Page level custom scripts -->
   <script src="{{asset('js/demo/chart-area-demo.js')}}"></script>
   <script src="{{asset('js/demo/chart-pie-demo.js')}}"></script>
+
+  <script src="{{asset ('js/chosen/chosen.jquery.js')}}"></script>
+  <script src="{{asset ('js/chosen/chosen-active.js')}}"></script>
 
   <!-- Page level plugins -->
   <script src="{{asset('vendor/datatables/jquery.dataTables.min.js')}}"></script>

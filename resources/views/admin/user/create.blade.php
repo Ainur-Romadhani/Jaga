@@ -27,14 +27,14 @@
     @csrf
         <div class="mb-3">
             <label for="exampleInputEmail1" class="form-label">Nama</label>
-            <input type="text" name="name"  placeholder="Masukkan Nama" class="form-control @error('name') is-invalid @enderror" id="exampleInputEmail1" aria-describedby="emailHelp">
+            <input type="text" name="name" value="{{   old('name') }}"  placeholder="Masukkan Nama" class="form-control @error('name') is-invalid @enderror" id="exampleInputEmail1" aria-describedby="emailHelp">
             @error('name')
             <div class="invalid-feedback">{{ $message }}</div>
             @enderror
         </div>
         <div class="mb-3">
             <label for="exampleInputEmail1" class="form-label">Email</label>
-            <input type="email" name="email"  placeholder="Masukkan Email" class="form-control @error('email') is-invalid @enderror" id="exampleInputEmail1" aria-describedby="emailHelp">
+            <input type="email" name="email" value="{{   old('email') }}"  placeholder="Masukkan Email" class="form-control @error('email') is-invalid @enderror" id="exampleInputEmail1" aria-describedby="emailHelp">
             @error('email')
             <div class="invalid-feedback">{{ $message }}</div>
             @enderror
@@ -48,7 +48,7 @@
         </div>
         <div class="mb-3">
             <label for="exampleInputPassword1" class="form-label">Password</label>
-            <input type="password" name="password" placeholder="Masukkan Password" class="form-control @error('password') is-invalid @enderror" id="exampleInputPassword1">
+            <input type="password" value="{{   old('password') }}" name="password" placeholder="Masukkan Password" class="form-control @error('password') is-invalid @enderror" id="exampleInputPassword1">
             @error('password')
             <div class="invalid-feedback">{{ $message }}</div>
             @enderror
