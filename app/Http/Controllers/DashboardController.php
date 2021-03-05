@@ -26,7 +26,8 @@ class DashboardController extends Controller
         $bulan              = Date('m');
         $data_anggota       = Anggota::all()->count();
         $data_anak_yatim    = AnakYatim::all()->count();
-        $rp_masuk           = SetoranIn::whereMonth('created_at','=' ,$bulan)->sum('jumlah_setoran');//bulan ini
+        // $rp_masuk           = SetoranIn::whereMonth('created_at','=' ,$bulan)->sum('jumlah_setoran');//bulan ini
+        $rp_masuk           = SetoranIn::all()->sum('jumlah_setoran');
         $masuk              = SetoranIn::all()->sum('jumlah_setoran');//total seluruh setoran masuk
         $setoran_masuk      = number_format($rp_masuk,0, ',' , '.');
         $keluar             = SetoranOut::all()->sum('dana_keluar');
