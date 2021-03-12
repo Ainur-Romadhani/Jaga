@@ -23,7 +23,7 @@
       
       <!-- Card Body -->
       <div class="card-body">
-    <form action="/postsetoranOut" method="POST" enctype="multipart/form-data">
+    <form action="{{ route('out.store')}}" method="POST" enctype="multipart/form-data">
     @csrf
         <div class="mb-3">
             <label for="exampleInputEmail1" class="form-label">Penerima</label>

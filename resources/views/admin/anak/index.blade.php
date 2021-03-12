@@ -49,7 +49,7 @@
                       <td>{{$data->nama_bapak}}</td>
                       <td>{{$data->no_hp_orang_tua}}</td>
                       <td>{{$data->alamat}}</td>
-                      <td align ="center"><a href="/editanak/{{$data->id_anak}}" class="btn btn-info btn-circle">
+                      <td align ="center"><a href="{{ route('anak.edit',[$data->id_anak])}}" class="btn btn-info btn-circle">
                       <i class="fas fa-user-edit"></i>
                             </a>  
                             <button class="btn btn-danger btn-circle" data-toggle="modal" data-target="#ModalDelete{{$data->id_anak}}">
@@ -68,7 +68,7 @@
                                     <div class="modal-footer">
                                         <button type="button" class="btn btn-primary waves-effect" data-dismiss="modal">Close</button>
                                         <!-- <button type="submit" class="btn btn-danger waves-effect remove-data-from-delete-form">Delete</button> -->
-                                        <a href="/deleteanak/{{$data->id_anak}}" class="btn btn-danger waves-effect remove-data-from-delete-form">
+                                        <a href="{{ route('anak.softdelete',[$data->id_anak])}}" class="btn btn-danger waves-effect remove-data-from-delete-form">
                                             <i class="fas fa-user-trash">Delete</i>
                                         </a>  
                                     </div>

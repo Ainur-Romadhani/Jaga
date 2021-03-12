@@ -43,7 +43,7 @@
                       <td>{{$data->nama_penyetor}}</td>
                       <td>{{$data->jumlah_setoran}}</td>
                       <td>{{$data->created_at}}</td>
-                      <td align ="center"><a href="/editsetoranIn/{{$data->id_setoran}}" class="btn btn-info btn-circle">
+                      <td align ="center"><a href="{{ route('in.edit',[$data->id_setoran])}}" class="btn btn-info btn-circle">
                       <i class="fas fa-user-edit"></i>
                             </a>  
                             <button class="btn btn-danger btn-circle" data-toggle="modal" data-target="#ModalDelete{{$data->id_setoran}}">
@@ -62,7 +62,7 @@
                                     <div class="modal-footer">
                                         <button type="button" class="btn btn-primary waves-effect" data-dismiss="modal">Close</button>
                                         <!-- <button type="submit" class="btn btn-danger waves-effect remove-data-from-delete-form">Delete</button> -->
-                                        <a href="/deletesetoranIn/{{$data->id_setoran}}" class="btn btn-danger waves-effect remove-data-from-delete-form">
+                                        <a href="{{ route('in.softdelete',[$data->id_setoran])}}" class="btn btn-danger waves-effect remove-data-from-delete-form">
                                             <i class="fas fa-user-trash">Delete</i>
                                         </a>  
                                     </div>

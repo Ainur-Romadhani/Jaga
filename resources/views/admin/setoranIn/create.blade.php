@@ -23,7 +23,7 @@
       
       <!-- Card Body -->
       <div class="card-body">
-    <form action="/postsetoranIn" method="POST">
+    <form action="{{ route('in.store')}}" method="POST">
     @csrf
         <div class="mb-3">
             <label for="exampleInputEmail1" class="form-label">Nama Penyetor</label>

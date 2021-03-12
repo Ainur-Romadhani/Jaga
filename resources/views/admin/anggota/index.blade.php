@@ -46,7 +46,7 @@
                       <td>{{$data->email}}</td>
                       <td>{{$data->no_hp}}</td>
                       <td>{{$data->alamat}}</td>
-                      <td align ="center"><a href="/editanggota/{{$data->id_anggota}}" class="btn btn-info btn-circle">
+                      <td align ="center"><a href="{{ route('anggota.edit',[$data->id_anggota])}}" class="btn btn-info btn-circle">
                       <i class="fas fa-user-edit"></i>
                             </a>  
                             
@@ -66,7 +66,7 @@
                                     <div class="modal-footer">
                                         <button type="button" class="btn btn-primary waves-effect" data-dismiss="modal">Close</button>
                                         <!-- <button type="submit" class="btn btn-danger waves-effect remove-data-from-delete-form">Delete</button> -->
-                                        <a href="/deleteanggota/{{$data->id_anggota}}" class="btn btn-danger waves-effect remove-data-from-delete-form">
+                                        <a href="{{ route('anggota.softdelete',[$data->id_anggota])}}" class="btn btn-danger waves-effect remove-data-from-delete-form">
                                             <i class="fas fa-user-trash">Delete</i>
                                         </a>  
                                     </div>

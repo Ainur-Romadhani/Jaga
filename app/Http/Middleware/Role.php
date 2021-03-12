@@ -20,6 +20,6 @@ class Role
            return $next($request);
        }
 
-       return redirect('/')->with('toast_error', 'Akses Di Tolak !');
+       return redirect('/dashboard')->with('toast_error', 'Akses Halaman Di Tolak  !');
     }
 }

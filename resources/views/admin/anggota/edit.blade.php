@@ -23,7 +23,7 @@
       
       <!-- Card Body -->
       <div class="card-body">
-    <form action="/updateanggota/{{$data_anggota->id_anggota}}" method="POST">
+    <form action="{{ route('anggota.update',[$data_anggota->id_anggota])}}" method="POST">
     @csrf
     @method('PUT')
         <div class="mb-3">

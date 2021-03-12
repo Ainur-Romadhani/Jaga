@@ -23,7 +23,7 @@
       
       <!-- Card Body -->
       <div class="card-body">
-    <form action="/updatesetoranOut/{{$data_setoran->id_setoran_out}}" method="POST" enctype="multipart/form-data">
+    <form action="{{ route('out.update',[$data_setoran->id_setoran_out])}}" method="POST" enctype="multipart/form-data">
     @csrf
     @method('PUT')
         <div class="mb-3">

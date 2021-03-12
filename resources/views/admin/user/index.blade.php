@@ -43,7 +43,7 @@
                       <td>{{$data->name}}</td>
                       <td>{{$data->email}}</td>
                       <td>{{$data->role}}</td>
-                      <td align ="center"><a href="/datauser/{{$data->id}}" class="btn btn-info btn-circle">
+                      <td align ="center"><a href="{{ route('user.edit',[$data->id])}}" class="btn btn-info btn-circle">
                       <i class="fas fa-user-edit"></i>
                             </a>  
                             <button class="btn btn-danger btn-circle" data-toggle="modal" data-target="#ModalDelete{{$data->id}}">
@@ -61,7 +61,7 @@
                                     <div class="modal-footer">
                                         <button type="button" class="btn btn-primary waves-effect" data-dismiss="modal">Close</button>
                                         <!-- <button type="submit" class="btn btn-danger waves-effect remove-data-from-delete-form">Delete</button> -->
-                                        <a href="/deleteuser/{{$data->id}}" class="btn btn-danger waves-effect remove-data-from-delete-form">
+                                        <a href="{{ route('user.softdelete',[$data->id])}}" class="btn btn-danger waves-effect remove-data-from-delete-form">
                                             <i class="fas fa-user-trash">Delete</i>
                                         </a>  
                                     </div>

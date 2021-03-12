@@ -23,7 +23,7 @@
       
       <!-- Card Body -->
       <div class="card-body">
-    <form action="/update/{{$data->id}}" method="POST">
+    <form action="{{ route('user.update',[$data->id])}}" method="POST">
     @csrf
     @method('PUT')
         <div class="mb-3">

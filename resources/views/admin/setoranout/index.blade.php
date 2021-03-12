@@ -49,7 +49,7 @@
                       <td>{{$data->keperluan}}</td>
                       <td>{{$data->dokumentasi}}</td>
                       <td>{{$data->created_at}}</td>
-                      <td align ="center"><a href="/editsetoranOut/{{$data->id_setoran_out}}" class="btn btn-info btn-circle">
+                      <td align ="center"><a href="{{  route('out.edit',[$data->id_setoran_out]) }}" class="btn btn-info btn-circle">
                       <i class="fas fa-user-edit"></i>
                             </a>  
                             <button class="btn btn-danger btn-circle" data-toggle="modal" data-target="#ModalDelete{{$data->id_setoran_out}}">

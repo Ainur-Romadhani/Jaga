@@ -28,8 +28,8 @@
 	<div class="limiter">
 		<div class="container-login100" style="background-image: url('template_login/images/img-01.jpg');">
 			<div class="wrap-login100 p-t-190 p-b-30">
-				<form class="login100-form validate-form" action = "/postlogin" method ="POST">
-					@csrf>
+				<form class="login100-form validate-form" action = "{{route ('postlogin')}}" method ="POST">
+					@csrf
 					<div class="login100-form-avatar">
 						<img src="{{asset ('template_user/assets/img/jagakali.png') }}" alt="AVATAR">
 					</div>
@@ -61,7 +61,7 @@
 
 
         <div class="text-center w-full">
-						<a class="txt1" href="/">
+						<a class="txt1" href="{{route ('home')}}">
 							Home
 							<i class="fa fa-long-arrow-right"></i>						
 						</a>
